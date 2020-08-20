@@ -24,6 +24,10 @@ default: &default
 development:
   <<: *default
   database: record_collection_development
+  username: andreheslop
+  password: daxter2690
+  host: localhost
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -83,3 +87,5 @@ production:
   database: record_collection_production
   username: record_collection
   password: <%= ENV['RECORD_COLLECTION_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DBURI'] %>
+
